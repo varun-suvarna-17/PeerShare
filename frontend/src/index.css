@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,600;1,14..32,700&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Exact sampled colors from the reference mockups */
+  --bg-dark: #f5d6bb;
+  --bg: #ffe4cc; /* Warm peach background from reference */
+  --bg-light: #fff1d9; /* Cream card & container surface from reference */
+  --surface-muted: #fff8ef; /* Softest warm surface */
+
+  --text: #2c1208; /* Deep warm charcoal/brown text */
+  --text-muted: #7c5847; /* Supporting muted brown */
+
+  --highlight: #ffe4cc;
+
+  --border: #ebd0bc;
+  --border-muted: #f4ded0;
+
+  --primary: #802200; /* Rust / Terracotta Send & Brand color */
+  --primary-hover: #9e2a00;
+  --secondary: #00537e; /* Deep Teal / Blue Receive color */
+  --secondary-hover: #006b9e;
+  --accent-pill: #d48d70; /* Warm terracotta button */
+
+  --danger: #b91c1c;
+  --warning: #b45309;
+  --success: #15803d;
+  --info: #00537e;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --shadow-soft: 0 14px 35px rgba(128, 34, 0, 0.07);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--primary) 20%, white);
+}
+
+@keyframes radar-ripple {
+  0% {
+    transform: scale(0.65);
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+.radar-ripple {
+  animation: radar-ripple 3.2s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+}

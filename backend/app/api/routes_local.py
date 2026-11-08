@@ -1,8 +1,9 @@
 """Frontend-facing local REST API endpoints (/api/*)."""
 
+import asyncio
 import os
 import tempfile
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 import uuid
 
 from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile, status
